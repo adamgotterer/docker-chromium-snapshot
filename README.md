@@ -8,13 +8,14 @@ specifying `--build-args CHROMIUM_REVISION` with the build id of the Chromium sn
 
 A list of Chromium snapshots can be found [here](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/).
 
-## How to use the base image
+## Using as a base image
 
+** Create a Dockerfile **
 ```Dockerfile
-# Dockerfile
 FROM chromie/chromium-snapshot:latest
 ```
 
+** Build **
 ```bash
 docker build --build-arg CHROMIUM_REVISION=XXXXX -t my-container .
 ```
