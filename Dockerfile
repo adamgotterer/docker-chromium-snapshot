@@ -65,7 +65,7 @@ RUN mkdir /data \
     && chown -R headless:headless /data
 
 ONBUILD RUN \
-  wget -P /tmp/ https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/$CHROMIUM_REVISION/chrome-linux.zip \
+  wget -nv -P /tmp/ https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/$CHROMIUM_REVISION/chrome-linux.zip \
   && unzip /tmp/chrome-linux.zip -d /tmp \
   && mv /tmp/chrome-linux /etc/alternatives/ \
   && ln -s /etc/alternatives/chrome-linux/chrome /bin/google-chrome \
