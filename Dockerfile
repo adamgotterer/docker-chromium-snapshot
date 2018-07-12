@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:jessie-slim
 LABEL name="chromium-snapshot" maintainer="agotterer[at]gmail.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
